@@ -1,5 +1,5 @@
 # BalloonView
-A customizable view for a popup balloon that has mathematically correct smooth corners. Also provides access to a UIBezierPath.
+A customizable & animatable view for a popup balloon that has mathematically correct smooth corners. Also provides access to a UIBezierPath.
 
 <img width="340" alt="Screen Shot 2021-06-04 at 14 11 37" src="https://user-images.githubusercontent.com/168214/120800672-7f583c80-c540-11eb-8679-5502c4188ecc.png">
 

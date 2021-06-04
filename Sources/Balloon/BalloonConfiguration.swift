@@ -100,4 +100,14 @@ extension BalloonConfiguration {
 				return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: stemSize.width)
 		}
 	}
+
+	/// gets the effective corner radius for a rectangle
+	public func effectiveCornerRadius(in rect: CGRect) -> CGFloat {
+		return cornerRadius.width(for: rectWithoutStem(rect))
+	}
+
+	/// gets the effective corner radius for a rectangle with the rectangle not taken the stem into account
+	public func effectiveCornerRadius(with rect: CGRect) -> CGFloat {
+		return cornerRadius.width(for: rect)
+	}
 }

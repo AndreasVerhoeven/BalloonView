@@ -99,7 +99,6 @@ class ViewController: UITableViewController {
 		contentLabel.font = UIFont(descriptor: fontDescriptor.withDesign(.rounded) ?? fontDescriptor, size: 26)
 
 		updateBalloonConfiguration(animated: false)
-
 	}
 }
 

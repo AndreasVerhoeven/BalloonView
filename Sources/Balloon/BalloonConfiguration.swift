@@ -80,23 +80,24 @@ public struct BalloonConfiguration: Equatable {
 extension BalloonConfiguration {
 	/// gets the rect without the stem
 	public func rectWithoutStem(_ rect: CGRect) -> CGRect {
+		return rect.inset(by: insetsForStem(in: rect))
+	}
+
+	/// gets the insets for the stem
+	public func insetsForStem(in rect: CGRect) -> UIEdgeInsets {
 		let (stemSize, _) = stem.stemSizeAndCornerSmootheningSize(for: rect)
-		var rectWithoutStem = rect
 		switch stem.edge {
 			case .top:
-				rectWithoutStem.origin.y += stemSize.height
-				rectWithoutStem.size.height -= stemSize.height
+				return UIEdgeInsets(top: stemSize.height, left: 0, bottom: 0, right: 0)
 
 			case .bottom:
-				rectWithoutStem.size.height -= stemSize.height
+				return UIEdgeInsets(top: 0, left: 0, bottom: stemSize.height, right: 0)
 
 			case .left:
-				rectWithoutStem.origin.x += stemSize.width
-				rectWithoutStem.size.width -= stemSize.width
+				return UIEdgeInsets(top: 0, left: stemSize.width, bottom: 0, right: 0)
 
 			case .right:
-				rectWithoutStem.size.width -= stemSize.width
+				return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: stemSize.width)
 		}
-		return rectWithoutStem
 	}
 }

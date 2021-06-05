@@ -78,8 +78,8 @@ import UIKit
 
 	// MARK: - Private
 	open func updateColors() {
-		shapeLayer.fillColor = fillColor?.cgColor
-		shapeLayer.strokeColor = strokeColor?.cgColor
+		shapeLayer.fillColor = fillColor?.resolvedColor(with: traitCollection).cgColor
+		shapeLayer.strokeColor = strokeColor?.resolvedColor(with: traitCollection).cgColor
 	}
 
 	// MARK: - UIView

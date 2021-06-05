@@ -40,7 +40,7 @@ public struct BalloonConfiguration: Equatable {
 		case fixed(CGFloat)
 
 		/// no corner radius
-		static let none: Self = .fixed(0)
+		public static let none: Self = .fixed(0)
 	}
 
 	/// how the stem is rendered
@@ -53,10 +53,10 @@ public struct BalloonConfiguration: Equatable {
 			case custom(widthRatio: CGFloat, heightRatio: CGFloat)
 
 			/// corner smoothing is disabled
-			static let disabled: Self = .custom(widthRatio: 0, heightRatio: 0)
+			public static let disabled: Self = .custom(widthRatio: 0, heightRatio: 0)
 
 			/// corner smoothing is enabled
-			static let enabled: Self = .custom(widthRatio: 0.3, heightRatio: 0.25)
+			public static let enabled: Self = .custom(widthRatio: 0.3, heightRatio: 0.25)
 		}
 
 		/// which edge to add the stem too

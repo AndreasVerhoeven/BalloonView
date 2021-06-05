@@ -23,15 +23,19 @@ extension BalloonEdge.Segment {
 		let cornerRadius = configuration.cornerRadius.width(for: rect)
 		let (stemSize, cornerSmootheningSize) = configuration.stem.stemSizeAndCornerSmootheningSize(for: rect)
 		let stemOffset = configuration.stem.offset
-		let cornerSmootheningWidth = cornerSmootheningSize.width
+
+		let wantedStemLeft = max(rect.minX, rect.minX + rect.width * 0.5 - stemSize.width * 0.5 + stemOffset)
+		let wantedStemRight = min(rect.maxX, rect.minX + rect.width * 0.5 + stemSize.width * 0.5 + stemOffset)
+		let finalStemRight = min(rect.maxX, max(wantedStemRight, wantedStemLeft + stemSize.width))
+		let finalStemStemLeft = max(rect.minX, min(wantedStemLeft, wantedStemRight - stemSize.width))
+		let stemMid = (finalStemStemLeft) + ((finalStemRight) - (finalStemStemLeft)) * 0.5
+
+		let spaceBetweenLeftAndWantedStemLeft = finalStemStemLeft - rect.minX
+
+		let cornerSmootheningWidth = min(cornerSmootheningSize.width, max(0, spaceBetweenLeftAndWantedStemLeft))
 		let cornerSmootheningHeight = cornerSmootheningSize.height
 
-		let stemMid = min(max(rect.minX + stemSize.width * 0.5 + cornerSmootheningWidth,
-							  rect.minX + rect.width * 0.5 + stemOffset),
-						  rect.maxX - stemSize.width * 0.5 - cornerSmootheningWidth)
-
-		let stemLeft = stemMid - stemSize.width * 0.5
-		//let stemRight = stemMid - stemSize.width * 0.5
+		let stemLeft = finalStemStemLeft
 		let stemSmoothenedWidth = min(stemSize.width * 0.5, configuration.stem.tipSmoothenWidth)
 
 		let stemTipPoint = CGPoint(x: stemMid, y: left.y + stemSize.height)

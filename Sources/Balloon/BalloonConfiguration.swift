@@ -16,6 +16,11 @@ public struct BalloonConfiguration: Equatable {
 	/// the stem configuration
 	public var stem: StemConfiguration = StemConfiguration()
 
+	public init(cornerRadius: CornerRadius = .fixed(8), stem: StemConfiguration = .init()) {
+		self.cornerRadius = cornerRadius
+		self.stem = stem
+	}
+
 	/// the edge at which we show the stem
 	public enum Edge {
 		/// the stem is at the top edge
@@ -73,6 +78,18 @@ public struct BalloonConfiguration: Equatable {
 
 		/// how much we smoothen the tip of the stem
 		public var tipSmoothenWidth = CGFloat(4)
+
+		public init(edge: Edge = .bottom,
+					offset: CGFloat = 0,
+					size: CGSize = CGSize(width: 40, height: 40),
+					cornerSmoothening: CornerSmoothening = .enabled,
+					tipSmoothenWidth: CGFloat = 4) {
+			self.edge = edge
+			self.offset = offset
+			self.size = size
+			self.cornerSmoothening = cornerSmoothening
+			self.tipSmoothenWidth = tipSmoothenWidth
+		}
 	}
 }
 

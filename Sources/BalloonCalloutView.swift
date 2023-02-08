@@ -111,7 +111,7 @@ open class BalloonCalloutView: UIView {
 		let inset = CGFloat(32)
 		let rect = CGRect(origin: .zero, size: parentView.bounds.size).inset(by: parentView.safeAreaInsets).inset(by: UIEdgeInsets(top: inset, left: inset, bottom: inset, right: inset))
 		let frameInParent = attachedToView.convert(attachedToView.bounds, to: parentView)
-		let diff = CGPoint(x: rect.midX - frameInParent.midX, y: rect.midY - frameInParent.minY)
+		let diff = CGPoint(x: parentView.bounds.midX - frameInParent.midX, y: parentView.bounds.midY - frameInParent.minY)
 		
 		var configuration = backgroundView.configuration
 		let offset: CGFloat

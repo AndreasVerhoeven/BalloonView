@@ -29,6 +29,7 @@
 		497399A5266A4D7200C97655 /* Slope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739995266A4D7200C97655 /* Slope.swift */; };
 		497399A6266A4D7200C97655 /* Circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739996266A4D7200C97655 /* Circle.swift */; };
 		497399A7266A4D7200C97655 /* FloatingPointEquality.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49739997266A4D7200C97655 /* FloatingPointEquality.swift */; };
+		49DFD7FF29940D01001513F9 /* BalloonCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DFD7FE29940D01001513F9 /* BalloonCalloutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		49739996266A4D7200C97655 /* Circle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Circle.swift; sourceTree = "<group>"; };
 		49739997266A4D7200C97655 /* FloatingPointEquality.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingPointEquality.swift; sourceTree = "<group>"; };
 		497399A8266A4DAB00C97655 /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		49DFD7FE29940D01001513F9 /* BalloonCalloutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonCalloutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				4973998E266A4D7200C97655 /* UIBezierPath+Balloon.swift */,
 				4973998F266A4D7200C97655 /* BalloonView.swift */,
 				49739990266A4D7200C97655 /* BalloonShapeView.swift */,
+				49DFD7FE29940D01001513F9 /* BalloonCalloutView.swift */,
 				49739991266A4D7200C97655 /* EuclideanGeometry */,
 			);
 			name = Sources;
@@ -229,6 +232,7 @@
 				49739999266A4D7200C97655 /* BalloonConfiguration.swift in Sources */,
 				497399A3266A4D7200C97655 /* CGPoint+Equality.swift in Sources */,
 				497399A4266A4D7200C97655 /* Line.swift in Sources */,
+				49DFD7FF29940D01001513F9 /* BalloonCalloutView.swift in Sources */,
 				497399062662570200C97655 /* AppDelegate.swift in Sources */,
 				497399082662570200C97655 /* SceneDelegate.swift in Sources */,
 			);

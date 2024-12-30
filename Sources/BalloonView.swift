@@ -14,10 +14,10 @@ open class BalloonView: UIView {
 		}
 	}
 
-	var clipView = UIView()
-	var balloonMask = BalloonShapeView()
-	var backgroundView = UIView()
-	var contentView = UIView()
+	public var clipView = UIView()
+	public var balloonMask = BalloonShapeView()
+	public var backgroundView = UIView()
+	public var contentView = UIView()
 
 	// MARK: - Private
 	private func setup() {
